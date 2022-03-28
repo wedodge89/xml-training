@@ -24,6 +24,7 @@ email {
 	display: block;
 	margin-top: 3%;
 }
+email::before {content: "email: "}
 
 phone {
 	font-size: 90%;
@@ -31,3 +32,5 @@ phone {
 	font-size: 90%;
 	display: block;
 }
+phone::before {content: attr(type) ": "}
+phone[primary]::after {content: " (" attr(primary) ")"}

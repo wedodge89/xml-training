@@ -1,4 +1,4 @@
-"Valid" XML Documents
+# Valid XML Documents
 * Parses document based on rules given by user
 * Document type definiteions (DTDs)
     * Simple to use, but not very powerful

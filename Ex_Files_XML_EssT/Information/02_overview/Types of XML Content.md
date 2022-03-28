@@ -1,3 +1,4 @@
+# Types of XML Content
 * **XML Document Declaration** <br>
     `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>`
     * Technically optional, though W3C recommends it

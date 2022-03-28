@@ -1,3 +1,4 @@
+# Proper XML Syntax
 * XML documents must have exactly one root tag
 * XML documents must be "well-formed"
     * Empty tags must be closed with `/>`
