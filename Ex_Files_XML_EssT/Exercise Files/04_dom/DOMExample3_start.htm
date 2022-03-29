@@ -9,6 +9,38 @@
 		var xmlData = document.getElementById("xmldata1");
 		var bizCards = xmlData.getElementsByTagName("BusinessCard");
 		
+        for (let i = 0; i < bizCards.length; i++) {
+            let currentCard = bizCards[i];
+            
+            let newCard = document.createElement("div");
+            newCard.setAttribute("class", "BusinessCard");
+            let newName = document.createElement("div");
+            newName.setAttribute("class", "Name");
+            let nameStr = document.createTextNode(currentCard.getElementsByTagName("Name")[0].firstChild.data);
+            newName.appendChild(nameStr);
+            newCard.appendChild(newName);
+
+            let newEmail = document.createElement("div");
+            newEmail.setAttribute("class", "email");
+            let emailStr = document.createTextNode(currentCard.getElementsByTagName("email")[0].firstChild.data);
+            newEmail.appendChild(emailStr);
+            newCard.appendChild(newEmail);
+
+            let phones = currentCard.getElementsByTagName("phone");
+            let newPhone;
+            for (let j = 0; j < phones.length; j++) {
+                newPhone = document.createElement("div");
+                newPhone.setAttribute("class", "phone");
+
+                let labelStr = currentCard.getElementsByTagName("phone")[j].getAttribute("type");
+                let phoneStr = document.createTextNode(labelStr + currentCard.getElementsByTagName("phone")[j].firstChild.data);
+
+                newPhone.appendChild(phoneStr);
+                newCard.appendChild(newPhone);
+            }
+
+            document.getElementsByTagName("body")[0].appendChild(newCard);
+        }
     }
     
     window.addEventListener("load",createBizCards);

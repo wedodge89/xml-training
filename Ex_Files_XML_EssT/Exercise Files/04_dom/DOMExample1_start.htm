@@ -12,8 +12,8 @@
         var xmldata1 = document.getElementById("xmldata1");
         var bizCard = xmldata1.getElementsByTagName("BusinessCard")[0];
         
-        var name;
-        var email;
+        var name = "Name: " + bizCard.getElementsByTagName("Name")[0].firstChild.data;
+        var email = "email: " + bizCard.getElementsByTagName("email")[0].firstChild.data;
         
         alert("BusinessCard Data: \n\n" + name + "\n" + email);
     }
